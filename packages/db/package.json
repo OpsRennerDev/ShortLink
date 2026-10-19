@@ -1,0 +1,28 @@
+{
+  "name": "@shortlink/db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "db:migrate": "prisma migrate dev",
+    "db:generate": "prisma generate",
+    "db:seed": "tsx --env-file=../../.env prisma/seed.ts",
+    "db:studio": "prisma studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.10.0",
+    "@prisma/client": "^7.10.0",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.23.1",
+    "prisma": "^7.10.0"
+  }
+}

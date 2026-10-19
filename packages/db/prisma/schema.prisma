@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Link {
+  id         String   @id @default(cuid())
+  slug       String   @unique
+  url        String
+  clickCount Int      @default(0)
+  createdAt  DateTime @default(now())
+  clicks     Click[]
+}
+
+model Click {
+  id        String   @id @default(cuid())
+  linkId    String
+  link      Link     @relation(fields: [linkId], references: [id], onDelete: Cascade)
+  userAgent String?
+  referer   String?
+  createdAt DateTime @default(now())
+
+  @@index([linkId, createdAt])
+}

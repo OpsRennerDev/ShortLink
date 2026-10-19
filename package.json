@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "name": "shortlink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:migrate": "npm run db:migrate -w packages/db",
+    "db:seed": "npm run db:seed -w packages/db",
+    "db:studio": "npm run db:studio -w packages/db",
+    "db:generate": "npm run db:generate -w packages/db",
+    "dev:api": "npm run dev -w apps/api",
+    "dev:web": "npm run dev -w apps/web",
+    "postinstall": "npm run db:generate -w packages/db"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
