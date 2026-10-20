@@ -71,7 +71,7 @@ export default function HomePage() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-medium">
             FIAP Live • Prisma 7 + Neon + Next.js
           </div>
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-linear-to-r from-indigo-400 to-cyan-400">
             ShortLink Pro
           </h1>
           <p className="text-slate-400 text-base">
@@ -123,7 +123,7 @@ export default function HomePage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-600 hover:to-cyan-600 text-white font-semibold transition shadow-lg disabled:opacity-50"
+              className="w-full py-3.5 px-4 rounded-xl bg-linear-to-r from-indigo-500 to-cyan-500 hover:from-indigo-600 hover:to-cyan-600 text-white font-semibold transition shadow-lg disabled:opacity-50"
             >
               {loading ? "Encurtando link..." : "Encurtar URL"}
             </button>

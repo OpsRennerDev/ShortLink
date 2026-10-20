@@ -15,7 +15,8 @@
     "db:generate": "npm run db:generate -w packages/db",
     "dev:api": "npm run dev -w apps/api",
     "dev:web": "npm run dev -w apps/web",
-    "postinstall": "npm run db:generate -w packages/db"
+    "build:api": "npm run build -w apps/api",
+    "build:web": "npm run build -w apps/web"
   },
   "keywords": [],
   "author": "",
@@ -25,5 +26,9 @@
     "@types/node": "^26.6.3",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "prisma@7.10.0": true,
+    "@prisma/engines@7.10.0": true
   }
 }
